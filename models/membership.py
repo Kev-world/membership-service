@@ -27,7 +27,7 @@ class MemberShipDetails(Base):
 
 class MemberShipTypes(Base):
     __tablename__ = 'membershiptypes'
-    code = Column(String(3), primary_key=True, unique=True)
+    code = Column(String(3), primary_key=True, index=True, unique=True)
     name = Column(String(10), nullable=False, unique=True)
     # Relationship: One MembershipType can be referenced by many MemberShipDetails
     membership_details = relationship("MemberShipDetails", back_populates="membership_type")
@@ -35,7 +35,7 @@ class MemberShipTypes(Base):
 
 class MemberShipStatus(Base):
     __tablename__ = 'membershipstatus'
-    code = Column(String(3), primary_key=True, unique=True)
+    code = Column(String(3), primary_key=True, index=True, unique=True)
     status = Column(String(10), nullable=False, unique=True)
     # Relationship: One MembershipStatus can be referenced by many MemberShipDetails
     membership_status = relationship("MemberShipDetails", back_populates="membership_status")
