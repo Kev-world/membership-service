@@ -46,6 +46,7 @@ async def get_all_rooms_events(db: db_dependency):
                 'title': room.title,
                 'description': room.description,
                 'max_capacity': room.max_capacity,
+                'instructor_id': room.instructor_id,
                 'events': []
             }
 
