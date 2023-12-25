@@ -1,7 +1,6 @@
 from databases.sqlDB import Base
 from sqlalchemy import Column, ForeignKey, Integer, String, Boolean, Date
 from sqlalchemy.dialects.mysql import JSON
-from sqlalchemy.orm import relationship
 import uuid
 
 class Instructors(Base):
